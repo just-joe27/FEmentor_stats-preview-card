@@ -18,8 +18,8 @@ body {
 
 .container {
 	display: flex;
-	height: 400px;
 	width: 1000px;
+	height: 400px;
 	margin: 15% auto;
 	border-radius: 5px;
 	padding: 5px;
@@ -40,7 +40,7 @@ body {
 .main-heading {
 	font-family: 'Lexend Deca', sans-serif;
 	line-height: 1.2;
-	letter-spacing: 0.13rem;
+	letter-spacing: 0.11rem;
 	color: var(--main-heading);
 }
 
@@ -74,6 +74,8 @@ body {
 	color: var(--stats);
 	text-transform: uppercase;
 	font-size: 12px;
+	font-weight: 700px;
+	letter-spacing: 0.11rem;
 }
 
 .container-right {
@@ -83,6 +85,61 @@ body {
 	background-color: var(--accent);
 	background-blend-mode: multiply;
 	background-size: cover;
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 10px 10px 0px;
 	filter: brightness(120%) contrast(90%) blur(0.7px);
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		flex-direction: column-reverse;
+		height: 800px;
+		width: 375px;
+	}
+
+	.text-container {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 10px 5px 0px 5px;
+		padding: 5px 25px;
+	}
+
+	.main-text {
+		margin-bottom: -5px;
+		padding: 5px 25px;
+	}
+
+	.container-right {
+		background-image: url('images/image-header-mobile.jpg');
+		height: 50%;
+		width: 100%;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.container-left {
+		flex-flow: column wrap;
+		width: 100%;
+		border-radius: 0px 0px 10px 10px;
+	}
+
+	.stats-container {
+		margin-top: 0;
+		margin-bottom: 30px;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.12rem;
+		font-weight: 700;
+	}
+
+	.stat {
+		margin: 5px;
+		width: 40%;
+		color: var(--main-heading);
+	}
+
+	.stat:nth-of-type(1) {
+		margin-left: 5px;
+	}
 }
